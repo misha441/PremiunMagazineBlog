@@ -3,6 +3,24 @@ body{
     background-color: #ebebeb;
 }
 
+body.lock{
+    overflow: hidden;
+}
+
+
+body::-webkit-scrollbar {
+    width: 6px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #e8eaea;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #989898;    /* color of the scroll thumb */
+    border-radius: 20px;  /* creates padding around scroll thumb */
+}
+
 *,
 *:after,
 *:before{
@@ -117,6 +135,10 @@ body{
 
 .header_search-container button:hover{
     background-color: red;
+}
+
+.sidebar-search{
+    display: none;
 }
 
 
@@ -942,7 +964,7 @@ body{
 
     .header_search-container input{
         height: 35px;
-        width: 250px;
+        width: 245px;
     }
     .header_search-container button{
         font-family: 'icomoon';
@@ -954,6 +976,18 @@ body{
     .header_search-container button:before{
         content: "\e986";
         font-size: 16px;
+    }
+
+    .top-search{
+        display: none;
+    }
+
+    .sidebar-search{
+        display: block;
+        position: absolute;
+        top:10px;
+        left: 4px;
+        height: 35px;
     }
 
     .icon-container a{
@@ -1015,7 +1049,7 @@ body{
     .header_bottom{
         position: fixed;
         padding:0;
-        top: 47px;
+        top: 45px;
         left:0;
         bottom: 0;
         width: 100%;
@@ -1033,13 +1067,36 @@ body{
     }
     .header_nav{
         position: relative;
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
         left: -350px;
         width: 300px;
         padding: 55px 0px 20px;
         background-color: #fff;
         height: 100%;
     }
+
+    .header_nav::-webkit-scrollbar {
+        width: 8px;               /* width of the entire scrollbar */
+    }
+
+    .header_nav::-webkit-scrollbar-track {
+        background: #e8eaea;        /* color of the tracking area */
+    }
+
+    .header_nav::-webkit-scrollbar-thumb {
+        background-color: #989898;    /* color of the scroll thumb */
+        border-radius: 20px;  /* creates padding around scroll thumb */
+    }
+
+    .header_nav-inner li:hover{
+        margin-top: 8px; 
+    }
+
+    .header_nav-inner li>a:hover{
+        padding-bottom: 9px;
+    }
+
     .header_nav-active{
         left: 0;
         animation: NavAnim 0.3s linear;

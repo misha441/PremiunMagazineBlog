@@ -53,6 +53,7 @@ $(document).ready(function(){
     $('.header_nav').toggleClass('header_nav-active header_nav-off');
     $('.burger_menu').toggleClass('burger_menu-active');
     $('.header_search-container').toggleClass('header_search-container-active');
+    $('body').toggleClass('lock');
   });
   
   $('.header_bottom-fon').on('click',function(event){
@@ -60,6 +61,7 @@ $(document).ready(function(){
     $('.header_nav').toggleClass('header_nav-active header_nav-off');
     $('.burger_menu').toggleClass('burger_menu-active');
     $('.header_search-container').toggleClass('header_search-container-active');
+    $('body').toggleClass('lock');
   });
 
   //slider
