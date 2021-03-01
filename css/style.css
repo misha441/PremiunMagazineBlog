@@ -1144,12 +1144,36 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width:500px){
+    body::-webkit-scrollbar {
+        width: 0px;               /* width of the entire scrollbar */
+    }
+
     .main_container{
         padding: 45px 20px;
     }
 
-    .slick-prev:before{
+    .slick-prev:before,
+    .slick-next:before{
         width: 25px;
+    }
+
+    .slick-next{
+        right: -19px;
+    }
+
+    .slick-prev{
+        left: -18px;
+    }
+
+    .slick-next,
+    .slick-prev{
+        width: 16px;
+        height: 20px;
+        border-width: 9px;
+    }
+
+    .slick-prev{
+
     }
 
     .main_post-title{
