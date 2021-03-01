@@ -1144,6 +1144,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width:500px){
+    .main_container{
+        padding: 30px 20px;
+    }
+
+    .slick-prev:before{
+        width: 25px;
+    }
+
     .main_post-title{
         font-size: 20px;
         line-height: 27px;
